@@ -18,5 +18,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tcp.Teste.Domain\Tcp.Teste.Domain.csproj" />
+    <ProjectReference Include="..\Tcp.Teste.Infraestrutura\Tcp.Teste.Infraestrutura.csproj" />
+  </ItemGroup>
+
 
 </Project>

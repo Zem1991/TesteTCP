@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tcp.Teste.Domain.Configurations;
+using Tcp.Teste.Infraestrutura.Configurations;
 
 namespace Tcp.Teste
 {
@@ -13,13 +15,16 @@ namespace Tcp.Teste
 	{
 		public static void Main(string[] args)
 		{
-			CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().Run();
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
 			Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
+					//TODO:
+					//ServiceBindings.Configure(builder.Services);
+					//RepositoryBindings.Configure(builder.Services);
 					webBuilder.UseStartup<Startup>();
 				});
 	}
