@@ -12,6 +12,8 @@ namespace Tcp.Teste.Infraestrutura.Configurations
         public static void Configure(IServiceCollection services)
         {
             services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
+            services.AddScoped<IExportadorBrasileiroRepository, ExportadorBrasileiroRepository>();
+            services.AddScoped<IExportadorParaguaiRepository, ExportadorParaguaiRepository>();
         }
     }
 }
