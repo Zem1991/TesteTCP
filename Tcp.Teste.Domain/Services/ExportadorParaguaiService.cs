@@ -42,10 +42,10 @@ namespace Tcp.Teste.Domain.Services
             return await repo.UpdateAsync(entity);
         }
 
-        public async Task DeleteAsync(ExportadorParaguai entity)
+        public async Task DeleteAsync(int id)
         {
             ExportadorParaguaiRepository repo = new ExportadorParaguaiRepository(DbContext);
-            await repo.DeleteAsync(entity);
+            await repo.DeleteAsync(id);
         }
     }
 }

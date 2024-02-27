@@ -10,7 +10,7 @@ namespace Tcp.Teste.Domain.Interfaces
         TesteContext DbContext { get; }
 
         Task<ExportadorBrasileiro> CreateAsync(ExportadorBrasileiro entity);
-        Task DeleteAsync(ExportadorBrasileiro entity);
+        Task DeleteAsync(int id);
         Task<List<ExportadorBrasileiro>> GetAllAsync();
         Task<ExportadorBrasileiro> GetByIdAsync(int id);
         Task<ExportadorBrasileiro> UpdateAsync(ExportadorBrasileiro entity);

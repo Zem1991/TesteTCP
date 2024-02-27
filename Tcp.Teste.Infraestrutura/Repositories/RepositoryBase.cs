@@ -40,8 +40,9 @@ namespace Tcp.Teste.Infraestrutura.Repositories
             return entity;
         }
 
-        public async Task DeleteAsync(TEntity entity)
+        public async Task DeleteAsync(int id)
         {
+            TEntity entity = await GetByIdAsync(id);
             _dbContext.Set<TEntity>().Remove(entity);
             await _dbContext.SaveChangesAsync();
         }
