@@ -12,7 +12,7 @@ namespace Tcp.Teste.Api.Controllers
     [ApiController]
     public class ExportadorParaguaiController : ControllerBase
     {
-        private readonly IExportadorParaguaiService _service;
+        private readonly IExportadorParaguaiService _service;//
 
         public ExportadorParaguaiController(IExportadorParaguaiService service)
         {
